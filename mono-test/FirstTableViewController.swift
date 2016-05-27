@@ -9,7 +9,9 @@
 import UIKit
 
 class FirstTableViewController: UITableViewController {
-
+    
+    let testList:[String] = ["저 고민이 있어요", "구라에요"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,13 +36,13 @@ class FirstTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return testList.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CustomCell", forIndexPath: indexPath)
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("CustomCell", forIndexPath: indexPath) as! CustomTableViewCell
+        cell.titleLabel.text = testList[indexPath.row]
         // Configure the cell...
 
         return cell

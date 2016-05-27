@@ -92,6 +92,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="uk7-UC-3go" id="zAK-DE-09Z"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
